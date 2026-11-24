@@ -563,8 +563,8 @@ def main():
         data = fetch_bms(event_code, dc, region_code,
                          region_slug_r, lat, lon, geohash)
         if not data:
-            print(f"  ⚠️  No data for date {dc or '(default)'}")
-            continue
+            print(f"  ❌ BookMyShow check failed for date {dc or '(default)'}")
+            sys.exit(1)
 
         if movie_info["name"] == "Unknown":
             movie_info = parse_movie_info(data)
