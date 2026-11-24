@@ -1,4 +1,4 @@
-"""
+successfully downloaded text file (SHA: 1f93f34a121032ae76bd33ab5e7b702c38507753)"""
 BMS Ticket Checker — CI/Headless mode for GitHub Actions.
 Runs once, checks all configured watches, emails on changes.
 State is persisted via a JSON artifact.
@@ -391,7 +391,7 @@ def _cat_status_label(status):
 
 def send_email(subject, changes, shows, movie_info):
     api_key = RESEND_API_KEY.strip()
-    to = RESEND_TO_EMAIL.strip()
+    to = [email.strip() for email in RESEND_TO_EMAIL.split(",") if email.strip()]
     frm = RESEND_FROM_EMAIL.strip() or "onboarding@resend.dev"
 
     if not api_key or not to:
