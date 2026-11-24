@@ -1,4 +1,4 @@
-successfully downloaded text file (SHA: 1f93f34a121032ae76bd33ab5e7b702c38507753)"""
+"""
 BMS Ticket Checker — CI/Headless mode for GitHub Actions.
 Runs once, checks all configured watches, emails on changes.
 State is persisted via a JSON artifact.
