@@ -505,7 +505,7 @@ def send_email(subject, changes, shows, movie_info):
                 "Content-Type": "application/json",
             },
             json={
-                "from": frm, "to": [to],
+                "from": frm, "to": to,
                 "subject": subject,
                 "text": plain, "html": html,
             },
